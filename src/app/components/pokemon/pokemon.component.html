@@ -1,0 +1,16 @@
+<div class="container">
+  <img
+    class="image center-block"
+    src="http://www.pngnames.com/files/5/Pokemon-Logo-PNG-Free-Pic.png"
+    alt="Generic placeholder image"
+  />
+  <div class="row">
+    <div class="grid-item" *ngFor="let pokemon of pokemones">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <a (click)="getPokemon(pokemon.url)">{{ pokemon.name }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

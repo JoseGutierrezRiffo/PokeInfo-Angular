@@ -1,0 +1,37 @@
+<div class="grid-container">
+  <img
+    class="image center-block"
+    src="http://www.pngnames.com/files/5/Pokemon-Logo-PNG-Free-Pic.png"
+  />
+  <div class="grid-item">
+    <img
+      class="center-block"
+      src="{{ pokemonInfo.sprites.front_default }}"
+      width="140"
+      height="140"
+    />
+    <h2>{{ pokemonInfo.name }}</h2>
+
+    <p>
+      Especie: {{pokemonInfo.species.name}}
+    </p>
+
+    <p *ngFor="let info of pokemonInfo.types">
+      Tipo: {{info.type.name}}
+    </p>
+
+    <p *ngFor="let info of pokemonInfo.abilities">
+      Abilidades: {{info.ability.name}}
+    </p>
+
+    <p>
+      Altura: {{pokemonInfo.height}}
+    </p>
+
+    <p>
+      Peso: {{pokemonInfo.weight}}
+    </p>
+
+    <p><a href="/" role="button">Quieres ver otro?</a></p>
+  </div>
+</div>
